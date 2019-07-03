@@ -83,10 +83,10 @@ class SitemapParser
   def parse_sitemap(url)
     sitemap_data = Nokogiri::XML(open(url))
 
-    if sitemap_data.at('urlset').present?
+    if !sitemap_data.at('urlset').nil?
       return filter_sitemap_urls(sitemap_data.at('urlset'))
 
-    elsif sitemap_data.at('sitemapindex').present?
+    elsif !sitemap_data.at('sitemapindex').nil?
       found_urls = []
       nested_sitemaps = sitemap_data.at('sitemapindex').search('sitemap')
 
