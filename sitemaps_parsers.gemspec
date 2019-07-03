@@ -12,15 +12,6 @@ Gem::Specification.new do |spec|
   spec.description   = 'SitemapsParsers - parser for XML sitemaps which respects sitemaps listed in robots.txt and handles gziped and nested sitemaps as well'
   spec.homepage      = 'https://github.com/kmaksimovv/sitemaps_parsers'
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-
-    spec.metadata['homepage_uri'] = spec.homepage
-  else
-    raise 'RubyGems 2.0 or newer is required to protect against ' \
-      'public gem pushes.'
-  end
-
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   end
