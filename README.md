@@ -21,15 +21,17 @@ Or install it yourself as:
     $ gem install sitemaps_parsers
 
 ## Usage
-Create a new instance of the Parser: sp = SitemapParser.new(domain name site), examples SitemapParser.new('test.com')
+Create a new instance of the Parser: 
+
+    $ sp = SitemapParser.new(domain name site), examples SitemapParser.new('test.com')
 
 Extract the URLs of the sitemap:
 
-sp.urls # => Array of urls from file sitemap.xml
+    $ sp.urls # => Array of urls from file sitemap.xml
 
-sp.sitemap_path # => Gets path to sitemap.xml
+    $ sp.sitemap_path # => Gets path to sitemap.xml
 
-sp.list_nested_sitemap #=> Gets list nested sitemaps
+    $ sp.list_nested_sitemap #=> Gets list nested sitemaps
 
 ## Development
 
